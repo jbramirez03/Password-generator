@@ -15,31 +15,6 @@ var randomSpecial = specialCharacters[specialCharRandom];
 var upperRandom = Math.floor(Math.random()* upperCaseCharacters.length);
 var randomUpper = upperCaseCharacters[upperRandom];
 
-// put all functions in a single object
-const randomFuncs = {
-  lower: getRandomChar,
-  number: getRandomNum,
-  special: getRandomSpec,
-  upper: getRandomUpper
-};
-
-// functions for random selection for each string of items
-function getRandomChar() {
-  return randomChar;
-}
-
-function getRandomNum() {
-  return randomNum;
-}
-
-function getRandomSpec() {
-  return randomSpecial;
-}
-
-function getRandomUpper() {
-  return randomUpper;
-}
-
 
 var generateBtn = document.querySelector("#generate");
 
@@ -56,6 +31,3 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 
-function generatePassword () {
-  window.prompt("What length would like your password to be? Enter a numerical value")
-}
