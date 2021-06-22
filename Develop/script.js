@@ -1,61 +1,81 @@
 // Assignment Code
-var characters = "abcdefghijklmnopqrstuvwxyz",
-    charactersnum = "0123456789",
-    specialCharacters = "@!#$",
-    upperCaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var lowerCaseChoice = (lowerCasePrompt === "YES");
+var lowerCasePrompt = window.prompt("Would you like lower case in your password? enter yes or no");
+
+var upperCaseChoice = (upperCasePrompt === "YES");  
+var upperCasePrompt = window.prompt("Would you also like upper case in your password? enter yes or no.");
+
+var numberChoice = (numberChoicePrompt === "YES");
+var numberChoicePrompt = window.prompt("would you like numbers in your password? enter yes or no.");
+
+var symbolChoice = (symbolChoice === "YES");
+var symbolChoicePrompt = window.prompt("would you like symbols in the password? enter yes or no.");
+
+var psLength = parseInt(lengthChoice, 10);
+var lengthChoice = window.prompt("what length would you like the password to be? enter a number.");
 
 
-    // variables for random selection:
-var charRandom = Math.floor(Math.random()* characters.length);
-var randomChar = characters[charRandom];
-var numbersRandom = Math.floor(Math.random()* charactersnum.length);
-var randomNum = charactersnum[numbersRandom];
-var specialCharRandom = Math.floor(Math.random()* specialCharacters.length);
-var randomSpecial = specialCharacters[specialCharRandom];
-var upperRandom = Math.floor(Math.random()* upperCaseCharacters.length);
-var randomUpper = upperCaseCharacters[upperRandom];
+const randomFunc = {
+  lower: getRandomLower,
+  upper: getRandomUpper,
+  number: getRandomNumber,
+  symbol: getRandomSymbol
+};
+
+var generateBtn = document.querySelector("#generate");
+
+
+generateBtn.addEventListener("click", () => {
+  
+  var length = parseInt(lengthChoice);
+  var lowerCaseChoice = (lowerCasePrompt === "YES");
+  var upperCaseChoice = (upperCasePrompt === "YES");
+  var numberChoice = (numberChoicePrompt === "YES");
+  var symbolChoice = (symbolChoice === "YES");
+  var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
+  var lowerCasePrompt = prompt("Would you like lower case in your password? enter yes or no");
+
+
+
+
+
+});
 
 
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// // Write password to the #password input
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
+// }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 
-function generatePassword() {
-var userLengthChoice = window.prompt("What length would you like your password to be? enter a numerical value");
-userLengthChoice = parseInt(userLengthChoice);
-var userCharChoice = window.prompt("Would you like lowercase letters in password? enter yes or no");
-userCharChoice = userCharChoice.toUpperCase();
-var userNumChoice = window.prompt("Would you like numbers in password? enter yes or no");
-userNumChoice = userNumChoice.toUpperCase();
-var userSpecialChoice = window.prompt("Would you like special characters in password? enter yes or no");
-userSpecialChoice = userSpecialChoice.toUpperCase();
-var userUpperChoice = window.prompt("Would you like uppercase letters in password? enter yes or no");
-userUpperChoice = userUpperChoice.toUpperCase();
+// function generatePassword() {}
 
-if (userCharChoice === "YES" && userNumChoice === "YES" && userSpecialChoice === "YES" && userUpperChoice === "YES") {
-var outcome1 = characters.concat(charactersnum, specialCharacters, upperCaseCharacters);
- var password = Math.floor(Math.random()* outcome1.length);
- var finalPassword = outcome1[password];
- for (var i = 0; i < 8; i++) {
-   return finalPassword;
- }
- console.log(finalPassword);
+
+// generator functions
+function getRandomLower () {
+  const characters = "abcdefghijklmnopqrstuvwxyz";
+  return characters[Math.floor(Math.random() * characters.length)];
 }
 
+function getRandomUpper () {
+  const upperCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return upperCharacters[Math.floor(Math.random() * upperCharacters.length)];
+}
 
+function getRandomNumber () {
+  const numbers = "0123456789";
+  return numbers[Math.floor(Math.random() * numbers.length)];
+}
 
-
-
-
-
+function getRandomSymbol () {
+  const symbols = "!@#$%^&*(){}[]=<>/,.'";
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
