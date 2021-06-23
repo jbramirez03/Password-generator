@@ -9,9 +9,7 @@ const randomFunc = {
   symbol: getRandomSymbol
 };
 
-generateBtn.addEventListener("click", () => {
-  
-  function isLength() {
+function isLength() {
     
   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
   lengthChoice = parseInt(lengthChoice);
@@ -66,15 +64,19 @@ function isSymbol() {
 return symbolChoice;
 };
 
-console.log(isLength());
-console.log(isLower(), isUpper(), isNumber(), isSymbol());
+
+generateBtn.addEventListener("click", () => {
+  
+ 
 
 
 
-// resultEl.innertext = generatePassword(isLower, isUpper, isNumber, isSymbol, isLength);
-
-});
-
+isLength();
+// console.log(isLength());
+ var typesarr = [isLower() ,  isNumber() ,  isSymbol() ,  isUpper() ];
+ console.log(typesarr);
+ 
+ 
 // function generatePassword(lower,upper,number,symbol,length) {
 //   let generatedPassword = "";
 
@@ -82,6 +84,14 @@ console.log(isLower(), isUpper(), isNumber(), isSymbol());
 
 //   console.log(typesCount);
 // }
+
+
+
+// resultEl.innertext = generatePassword(isLower, isUpper, isNumber, isSymbol, isLength);
+
+});
+
+
 // var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
