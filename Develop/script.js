@@ -1,19 +1,4 @@
 // Assignment Code
-var lowerCaseChoice = (lowerCasePrompt === "YES");
-var lowerCasePrompt = window.prompt("Would you like lower case in your password? enter yes or no");
-
-var upperCaseChoice = (upperCasePrompt === "YES");  
-var upperCasePrompt = window.prompt("Would you also like upper case in your password? enter yes or no.");
-
-var numberChoice = (numberChoicePrompt === "YES");
-var numberChoicePrompt = window.prompt("would you like numbers in your password? enter yes or no.");
-
-var symbolChoice = (symbolChoice === "YES");
-var symbolChoicePrompt = window.prompt("would you like symbols in the password? enter yes or no.");
-
-var psLength = parseInt(lengthChoice, 10);
-var lengthChoice = window.prompt("what length would you like the password to be? enter a number.");
-
 
 const randomFunc = {
   lower: getRandomLower,
@@ -27,22 +12,35 @@ var generateBtn = document.querySelector("#generate");
 
 generateBtn.addEventListener("click", () => {
   
-  var length = parseInt(lengthChoice);
-  var lowerCaseChoice = (lowerCasePrompt === "YES");
-  var upperCaseChoice = (upperCasePrompt === "YES");
-  var numberChoice = (numberChoicePrompt === "YES");
-  var symbolChoice = (symbolChoice === "YES");
   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
+  var length = parseInt(lengthChoice);
+
   var lowerCasePrompt = prompt("Would you like lower case in your password? enter yes or no");
+  lowerCasePrompt = lowerCasePrompt.toUpperCase();
+  var lowerCaseChoice = (lowerCasePrompt === "YES");
+
+  var upperCasePrompt = prompt("Would you also like upper case in your password? enter yes or no.");
+  upperCasePrompt = upperCasePrompt.toUpperCase();
+  var upperCaseChoice = (upperCasePrompt === "YES");
+
+  var numberChoicePrompt = prompt("would you like numbers in your password? enter yes or no.");
+  numberChoicePrompt = numberChoicePrompt.toUpperCase();
+  var numberChoice = (numberChoicePrompt === "YES");
+
+  var symbolChoicePrompt = prompt("would you like symbols in the password? enter yes or no.");
+  symbolChoicePrompt = symbolChoicePrompt.toUpperCase();
+  var symbolChoice = (symbolChoicePrompt === "YES");
 
 
 
+console.log(length);
+console.log(lowerCaseChoice, upperCaseChoice, numberChoice, symbolChoice);
 
 
 });
 
 
-var generateBtn = document.querySelector("#generate");
+// var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
 // function writePassword() {
