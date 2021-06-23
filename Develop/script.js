@@ -15,14 +15,18 @@ generateBtn.addEventListener("click", () => {
     
   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
   lengthChoice = parseInt(lengthChoice);
-  
+  if (!lengthChoice) {
+    return;
+  }
   return lengthChoice;
 };
 
 function isLower() {
   
   var lowerCasePrompt = prompt("Would you like lower case in your password? enter yes or no");
-  
+  if (!lowerCasePrompt) {
+    return;
+  }
   lowerCasePrompt = lowerCasePrompt.toUpperCase();
   var lowerCaseChoice = (lowerCasePrompt === "YES");
   
@@ -32,7 +36,9 @@ function isLower() {
 function isUpper() {
   
   var upperCasePrompt = prompt("Would you also like upper case in your password? enter yes or no.");
-  
+  if (!upperCasePrompt) {
+    return;
+  }
   upperCasePrompt = upperCasePrompt.toUpperCase();
   var upperCaseChoice = (upperCasePrompt === "YES");
   return upperCaseChoice;
@@ -41,7 +47,9 @@ function isUpper() {
 function isNumber() {
   
   var numberChoicePrompt = prompt("would you like numbers in your password? enter yes or no.");
-  
+  if (!numberChoicePrompt) {
+    return;
+  }
   numberChoicePrompt = numberChoicePrompt.toUpperCase();
   var numberChoice = (numberChoicePrompt === "YES");
   return numberChoice;
@@ -50,7 +58,9 @@ function isNumber() {
 function isSymbol() {
   
   var symbolChoicePrompt = prompt("would you like symbols in the password? enter yes or no.");
-  
+  if (!symbolChoicePrompt) {
+    return;
+  }
   symbolChoicePrompt = symbolChoicePrompt.toUpperCase();
   var symbolChoice = (symbolChoicePrompt === "YES");
 return symbolChoice;
