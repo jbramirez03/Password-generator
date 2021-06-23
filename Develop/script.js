@@ -9,6 +9,7 @@ const randomFunc = {
   symbol: getRandomSymbol
 };
 
+
 function isLength() {
     
   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
@@ -67,16 +68,27 @@ return symbolChoice;
 
 generateBtn.addEventListener("click", () => {
   
- 
-
-
-
+  let generatedPassword = "";
 isLength();
-// console.log(isLength());
- var typesarr = [isLower() ,  isNumber() ,  isSymbol() ,  isUpper() ];
- console.log(typesarr);
- 
- 
+
+ var typesArr = [isLower() ,  isNumber() ,  isSymbol() ,  isUpper() ];
+
+ const functionToFilter = function(isTrue) {
+   return isTrue;
+ };
+
+ var typesArrFiltered = typesArr.filter(functionToFilter);
+
+ console.log(typesArrFiltered);
+
+
+
+  
+
+
+
+
+
 // function generatePassword(lower,upper,number,symbol,length) {
 //   let generatedPassword = "";
 
