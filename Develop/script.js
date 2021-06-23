@@ -1,4 +1,6 @@
 // Assignment Code
+var resultEl = document.querySelector("password");
+var generateBtn = document.querySelector("#generate");
 
 const randomFunc = {
   lower: getRandomLower,
@@ -7,39 +9,69 @@ const randomFunc = {
   symbol: getRandomSymbol
 };
 
-var generateBtn = document.querySelector("#generate");
-
-
 generateBtn.addEventListener("click", () => {
   
+  function isLength() {
+    
   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
-  var length = parseInt(lengthChoice);
+  lengthChoice = parseInt(lengthChoice);
+  
+  return lengthChoice;
+};
 
+function isLower() {
+  
   var lowerCasePrompt = prompt("Would you like lower case in your password? enter yes or no");
+  
   lowerCasePrompt = lowerCasePrompt.toUpperCase();
   var lowerCaseChoice = (lowerCasePrompt === "YES");
+  
+  return lowerCaseChoice;
+};
 
+function isUpper() {
+  
   var upperCasePrompt = prompt("Would you also like upper case in your password? enter yes or no.");
+  
   upperCasePrompt = upperCasePrompt.toUpperCase();
   var upperCaseChoice = (upperCasePrompt === "YES");
+  return upperCaseChoice;
+};
 
+function isNumber() {
+  
   var numberChoicePrompt = prompt("would you like numbers in your password? enter yes or no.");
+  
   numberChoicePrompt = numberChoicePrompt.toUpperCase();
   var numberChoice = (numberChoicePrompt === "YES");
+  return numberChoice;
+};
 
+function isSymbol() {
+  
   var symbolChoicePrompt = prompt("would you like symbols in the password? enter yes or no.");
+  
   symbolChoicePrompt = symbolChoicePrompt.toUpperCase();
   var symbolChoice = (symbolChoicePrompt === "YES");
+return symbolChoice;
+};
+
+console.log(isLength());
+console.log(isLower(), isUpper(), isNumber(), isSymbol());
 
 
 
-console.log(length);
-console.log(lowerCaseChoice, upperCaseChoice, numberChoice, symbolChoice);
-
+// resultEl.innertext = generatePassword(isLower, isUpper, isNumber, isSymbol, isLength);
 
 });
 
+// function generatePassword(lower,upper,number,symbol,length) {
+//   let generatedPassword = "";
 
+//   const typesCount = lower + upper + number + symbol;
+
+//   console.log(typesCount);
+// }
 // var generateBtn = document.querySelector("#generate");
 
 // // Write password to the #password input
