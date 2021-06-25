@@ -174,3 +174,12 @@ var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
 var symbol = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+"];
 
 
+// using query selector to link button id to script and will be used to make an eventlistener
+var button = document.querySelector("#generate");
+
+// making eventlistener with 'click' 
+
+get.addEventListener("click", function () {
+
+});
+
