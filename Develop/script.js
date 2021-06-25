@@ -241,4 +241,19 @@ function createPassword () {
     console.log(choices);
   }
 
+  else if (lowerCaseChoice && symbolChoice) {
+    choices = lowercase.concat(symbol);
+    console.log(choices);
+  }
+
+  else if (upperCaseChoice && numberChoice) {
+    choices = uppercase.concat(number);
+    console.log(choices);
+  }
+
+  else if (upperCaseChoice && symbolChoice) {
+    choices = uppercase.concat(symbol);
+    console.log(choices);
+  }
+
 }
