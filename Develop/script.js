@@ -195,14 +195,19 @@ function createPassword () {
     alert("Password must be between 8 and 120 characters");
   }else {
 
-    lowerCaseInput = confirm("Would you like lowercase letters in your password? press ok for yes");
-    upperCaseInput = confirm("Would you like uppercase letters in your password? press ok for yes");
-    numberInput = confirm("Would you like numbers in your password? press ok for yes");
-    symbol = confirm("Would you like to use symbols in your password? press ok for yes");
+    lowerCaseChoice = confirm("Would you like lowercase letters in your password? press ok for yes");
+    upperCaseChoice = confirm("Would you like uppercase letters in your password? press ok for yes");
+    numberChoice = confirm("Would you like numbers in your password? press ok for yes");
+    symbolChoice = confirm("Would you like to use symbols in your password? press ok for yes");
   };
 
+  // variable to be used for merging arrays together upon condition met
+  var choice;
+
   // make a conditional that makes it a requirement to atleast pick one criteria before continuing 
-  
+  if(!lowerCaseChoice && !upperCaseChoice && !numberChoice && !symbolChoice) {
+    
+  }
 
 
 }
