@@ -160,10 +160,10 @@
 // assignment code:
 
 var length;
-var confirmNumber;
-var confirmCharacter;
-var confirmUpperCase;
-var confirmLowercase;
+var lowerCaseInput;
+var upperCaseInput;
+var numberInput;
+var symbolInput;
 
 
 // arrays containing strings that will be randomized for password making
@@ -193,6 +193,16 @@ function createPassword () {
   // using a conditional in order to make sure password length is between 8 and 120
   if(length < 8 || length > 120) {
     alert("Password must be between 8 and 120 characters");
-  }
+  }else {
+
+    lowerCaseInput = confirm("Would you like lowercase letters in your password? press ok for yes");
+    upperCaseInput = confirm("Would you like uppercase letters in your password? press ok for yes");
+    numberInput = confirm("Would you like numbers in your password? press ok for yes");
+    symbol = confirm("Would you like to use symbols in your password? press ok for yes");
+  };
+
+  // make a conditional that makes it a requirement to atleast pick one criteria before continuing 
+  
+
 
 }
