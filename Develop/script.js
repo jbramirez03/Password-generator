@@ -280,7 +280,19 @@ function createPassword () {
   else if (symbolChoice) {
     choices = symbol;
     console.log(choices);
+  };
+
+
+  // the for loop is set to the number the user inputs in the first prompt and the random and floor function return a random element from the array
+  var result = [];
+  for (let i = 0; i < length; i++) {
+    var choicesRandom = choices[Math.floor(Math.random() * choices.length)];
+    result.unshift(choicesRandom);
   }
+
+  var finalPassword = result.join("");
+  console.log(finalPassword);
+  return finalPassword
 
 
 
