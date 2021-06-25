@@ -180,7 +180,8 @@ var button = document.querySelector("#generate");
 // making eventlistener with 'click' 
 
 button.addEventListener("click", function () {
-  createPassword();
+  finalPassword = createPassword();
+  finalResult();
 });
   
 
@@ -290,10 +291,14 @@ function createPassword () {
     result.unshift(choicesRandom);
   }
 
+  // join function makes all the new elements added into the array into one single string so they dont come out as individual elements in a array
   var finalPassword = result.join("");
   console.log(finalPassword);
   return finalPassword
 
 
+}
 
+function finalResult () {
+  document.querySelector("#password").textContent = finalPassword;
 }
