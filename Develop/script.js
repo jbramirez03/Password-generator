@@ -211,7 +211,7 @@ function createPassword () {
 
   // else if made to to create first set of criteria results
   else if (lowerCaseChoice && upperCaseChoice && numberChoice && symbolChoice) {
-    choices = lowerCase.concat(upperCase, number, symbol);
+    choices = lowercase.concat(uppercase, number, symbol);
     console.log(choices);
   }
 
