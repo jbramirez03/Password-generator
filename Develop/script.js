@@ -230,7 +230,7 @@ function createPassword () {
     console.log(choices);
   }
 
-// criteria result form choosing two options
+// criteria result from choosing two options
   else if (lowerCaseChoice && upperCaseChoice) {
     choices = lowercase.concat(uppercase);
     console.log(choices);
@@ -255,5 +255,33 @@ function createPassword () {
     choices = uppercase.concat(symbol);
     console.log(choices);
   }
+
+  else if (numberChoice && symbolChoice) {
+    choices = number.concat(symbol);
+    console.log(choices);
+  }
+
+  // criteria result from choosing only one option
+  else if (lowerCaseChoice) {
+    choices = lowercase;
+    console.log(choices);
+  }
+
+  else if (upperCaseChoice) {
+    choices = uppercase;
+    console.log(choices);
+  }
+
+  else if (numberChoice) {
+    choices = number;
+    console.log(choices);
+  }
+
+  else if (symbolChoice) {
+    choices = symbol;
+    console.log(choices);
+  }
+
+
 
 }
