@@ -220,5 +220,25 @@ function createPassword () {
     console.log(choices);
   }
 
+  else if (lowerCaseChoice && upperCaseChoice && symbolChoice) {
+    choices = lowercase.concat(uppercase, symbol);
+    console.log(choices);
+  }
+
+  else if (upperCaseChoice && numberChoice && symbolChoice) {
+    choices = uppercase.concat(number, symbol);
+    console.log(choices);
+  }
+
+// criteria result form choosing two options
+  else if (lowerCaseChoice && upperCaseChoice) {
+    choices = lowercase.concat(uppercase);
+    console.log(choices);
+  }
+
+  else if (lowerCaseChoice && numberChoice) {
+    choices = lowercase.concat(number);
+    console.log(choices);
+  }
 
 }
