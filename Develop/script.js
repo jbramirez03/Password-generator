@@ -33,7 +33,10 @@ function createPassword () {
   length = parseInt(prompt("How many characters would you like in the password? must be between 8 and 128"));
 
   // using a conditional in order to make sure password length is between 8 and 120
-  if(length < 8 || length > 120) {
+  if (!length) {
+    alert("This field is required to continue");
+    return;
+  }else if(length < 8 || length > 120) {
     alert("Password must be between 8 and 120 characters");
   }else {
 
