@@ -182,4 +182,17 @@ var button = document.querySelector("#generate");
 get.addEventListener("click", function () {
 
 });
+  
 
+// making function to create password
+
+function createPassword () {
+  // used parseInt in order to get the input from the user to be converted from a string to a number value
+  length = parseInt(prompt("How many characters would you like in the password? must be between 8 and 128"));
+
+  // using a conditional in order to make sure password length is between 8 and 120
+  if(length < 8 || length > 120) {
+    alert("Password must be between 8 and 120 characters");
+  }
+
+}
