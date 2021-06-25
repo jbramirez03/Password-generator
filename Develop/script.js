@@ -179,8 +179,8 @@ var button = document.querySelector("#generate");
 
 // making eventlistener with 'click' 
 
-get.addEventListener("click", function () {
-
+button.addEventListener("click", function () {
+  createPassword();
 });
   
 
@@ -202,11 +202,17 @@ function createPassword () {
   };
 
   // variable to be used for merging arrays together upon condition met
-  var choice;
+  var choices;
 
   // make a conditional that makes it a requirement to atleast pick one criteria before continuing 
   if(!lowerCaseChoice && !upperCaseChoice && !numberChoice && !symbolChoice) {
-    
+    choices = alert("At least one criteria must be chosen for password");
+  }
+
+  // else if made to to create first set of criteria results
+  else if (lowerCaseChoice && upperCaseChoice && numberChoice && symbolChoice) {
+    choices = lowerCase.concat(upperCase, number, symbol);
+    console.log(choices);
   }
 
 
