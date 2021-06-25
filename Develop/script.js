@@ -1,10 +1,10 @@
 // assignment code:
 
 var length;
-var lowerCaseInput;
-var upperCaseInput;
-var numberInput;
-var symbolInput;
+var lowerCaseChoice;
+var upperCaseChoice;
+var numberChoice;
+var symbolChoice;
 
 
 // arrays containing strings that will be randomized for password making
@@ -52,6 +52,7 @@ function createPassword () {
   // make a conditional that makes it a requirement to atleast pick one criteria before continuing 
   if(!lowerCaseChoice && !upperCaseChoice && !numberChoice && !symbolChoice) {
     choices = alert("At least one criteria must be chosen for password");
+    return;
   }
 
   // else if made to to create first set of criteria results
@@ -128,6 +129,7 @@ function createPassword () {
 
 }
 
+// function that places the final password into the placeholder text "your secure password"
 function finalResult () {
   document.querySelector("#password").textContent = finalPassword;
 }
