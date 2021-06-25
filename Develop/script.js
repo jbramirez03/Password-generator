@@ -1,162 +1,3 @@
-// Assignment Code
-// var resultEl = document.querySelector("password");
-// var generateBtn = document.querySelector("#generate");
-
-// // const randomfunc = [getRandomLower, getRandomUpper, getRandomNumber, getRandomSymbol];
-// function getRandomLower () {
-//   const characters = "abcdefghijklmnopqrstuvwxyz";
-//   return characters[Math.floor(Math.random() * characters.length)];
-// };
-
-// function getRandomUpper () {
-//   const upperCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//   return upperCharacters[Math.floor(Math.random() * upperCharacters.length)];
-// };
-
-// function getRandomNumber () {
-//   const numbers = "0123456789";
-//   return numbers[Math.floor(Math.random() * numbers.length)];
-// };
-
-// function getRandomSymbol () {
-//   const symbols = "!@#$%^&*(){}[]=<>/,.'";
-//   return symbols[Math.floor(Math.random() * symbols.length)];
-// };
-
-// const randomFunc = {
-//   lower: getRandomLower,
-//   upper: getRandomUpper,
-//   number: getRandomNumber,
-//   symbol: getRandomSymbol
-// };
-
-
-// function isLength() {
-    
-//   var lengthChoice = prompt("what length would you like the password to be? enter a number.", "0");
-//   lengthChoice = parseInt(lengthChoice);
-//   if (!lengthChoice) {
-//     return;
-//   }
-//   return lengthChoice;
-// };
-
-// function isLower() {
-  
-//   var lowerCasePrompt = prompt("Would you like lower case in your password? enter yes or no");
-//   if (!lowerCasePrompt) {
-//     return;
-//   }
-//   lowerCasePrompt = lowerCasePrompt.toUpperCase();
-//   var lowerCaseChoice = (lowerCasePrompt === "YES");
-  
-//   return lowerCaseChoice;
-// };
-
-// function isUpper() {
-  
-//   var upperCasePrompt = prompt("Would you also like upper case in your password? enter yes or no.");
-//   if (!upperCasePrompt) {
-//     return;
-//   }
-//   upperCasePrompt = upperCasePrompt.toUpperCase();
-//   var upperCaseChoice = (upperCasePrompt === "YES");
-//   return upperCaseChoice;
-// };
-
-// function isNumber() {
-  
-//   var numberChoicePrompt = prompt("would you like numbers in your password? enter yes or no.");
-//   if (!numberChoicePrompt) {
-//     return;
-//   }
-//   numberChoicePrompt = numberChoicePrompt.toUpperCase();
-//   var numberChoice = (numberChoicePrompt === "YES");
-//   return numberChoice;
-// };
-
-// function isSymbol() {
-  
-//   var symbolChoicePrompt = prompt("would you like symbols in the password? enter yes or no.");
-//   if (!symbolChoicePrompt) {
-//     return;
-//   }
-//   symbolChoicePrompt = symbolChoicePrompt.toUpperCase();
-//   var symbolChoice = (symbolChoicePrompt === "YES");
-// return symbolChoice;
-// };
-
-
-// generateBtn.addEventListener("click", () => {
-  
-//   let generatedPassword = "";
-// isLength();
-
-//  var typesArr = [isLower(), isNumber(), isSymbol(), isUpper() ];
-
-//  const functionToFilter = function(isTrue) {
-//    return isTrue;
-//  };
-
-//  var typesArrFiltered = typesArr.filter(functionToFilter);
-
-//  console.log(typesArrFiltered);
-
-// for(let i = 0; i < parseInt(isLength()); i += typesArrFiltered.length) {
-//   typesArrFiltered.forEach(item => {
-//     const funcName = Object.values(item)[0];
-//     console.log(funcName);
-
-//     generatedPassword += randomFunc[funcName]();
-//   });
-// }
-
-
-
-
-    
-  
-
-  
-  // });
-
-
-
-
-// function generatePassword(lower,upper,number,symbol,length) {
-//   let generatedPassword = "";
-
-//   const typesCount = lower + upper + number + symbol;
-
-//   console.log(typesCount);
-// }
-
-
-
-// resultEl.innertext = generatePassword(isLower, isUpper, isNumber, isSymbol, isLength);
-
-
-
-
-// var generateBtn = document.querySelector("#generate");
-
-// // Write password to the #password input
-// function writePassword() {
-//   var password = generatePassword();
-//   var passwordText = document.querySelector("#password");
-
-//   passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-// function generatePassword() {}
-
-
-// generator functions
-
 // assignment code:
 
 var length;
@@ -213,74 +54,60 @@ function createPassword () {
   // else if made to to create first set of criteria results
   else if (lowerCaseChoice && upperCaseChoice && numberChoice && symbolChoice) {
     choices = lowercase.concat(uppercase, number, symbol);
-    console.log(choices);
   }
 
   else if (lowerCaseChoice && upperCaseChoice && numberChoice) {
     choices = lowercase.concat(uppercase, number);
-    console.log(choices);
   }
 
   else if (lowerCaseChoice && upperCaseChoice && symbolChoice) {
     choices = lowercase.concat(uppercase, symbol);
-    console.log(choices);
   }
 
   else if (upperCaseChoice && numberChoice && symbolChoice) {
     choices = uppercase.concat(number, symbol);
-    console.log(choices);
   }
 
 // criteria result from choosing two options
   else if (lowerCaseChoice && upperCaseChoice) {
     choices = lowercase.concat(uppercase);
-    console.log(choices);
   }
 
   else if (lowerCaseChoice && numberChoice) {
     choices = lowercase.concat(number);
-    console.log(choices);
   }
 
   else if (lowerCaseChoice && symbolChoice) {
     choices = lowercase.concat(symbol);
-    console.log(choices);
   }
 
   else if (upperCaseChoice && numberChoice) {
     choices = uppercase.concat(number);
-    console.log(choices);
   }
 
   else if (upperCaseChoice && symbolChoice) {
     choices = uppercase.concat(symbol);
-    console.log(choices);
   }
 
   else if (numberChoice && symbolChoice) {
     choices = number.concat(symbol);
-    console.log(choices);
   }
 
   // criteria result from choosing only one option
   else if (lowerCaseChoice) {
     choices = lowercase;
-    console.log(choices);
   }
 
   else if (upperCaseChoice) {
     choices = uppercase;
-    console.log(choices);
   }
 
   else if (numberChoice) {
     choices = number;
-    console.log(choices);
   }
 
   else if (symbolChoice) {
     choices = symbol;
-    console.log(choices);
   };
 
 
@@ -293,7 +120,6 @@ function createPassword () {
 
   // join function makes all the new elements added into the array into one single string so they dont come out as individual elements in a array
   var finalPassword = result.join("");
-  console.log(finalPassword);
   return finalPassword
 
 
