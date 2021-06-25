@@ -27,5 +27,4 @@ I then called the function and added comments to my script and html.
 [Password in textbox](Develop/images/screenshot9.png)
 
 ## Links
-[local url](file:///Users/jason/Documents/classwork/Password-maker-3/Password-generator/Develop/index.html)
 [Github](https://jbramirez03.github.io/Password-generator/)
