@@ -215,5 +215,10 @@ function createPassword () {
     console.log(choices);
   }
 
+  else if (lowerCaseChoice && upperCaseChoice && numberChoice) {
+    choices = lowercase.concat(uppercase, number);
+    console.log(choices);
+  }
+
 
 }
