@@ -1,30 +1,51 @@
-# Password-generator
-## Description
-The first thing I did was make variables for the input the user makes when selecting criteria.
-I then made different arrays each holding different values such as lower case letters, upper case letters, numbers and symbols.
-I made a variable to link the button id to the script using a query selector,
-then i added an event listener and a function.
-I then made the main function that will run to creat the password and i worked inside that.
-I used the variables that I made in the very beginning and added prompts inside them and confirm messages and that is how the user will select whether or not he/she wants a certain value in their password.
-A variable was created in order to merge the arrays that met the criteria and this variable was named choices and I used concat in order to merge the arrays that were selected in the prompts.
-I made a conditional where if no length was given the function would automatically end and then right after i added another conditional, this conditional made sure there was atleast one value given in the criteria and if it didnt it would give an alert message.
-I then used different 'else if' conditionals for each option possibility and each concat result.
-When first writing the code I had a console log inside each of these conditionals in order to see if each one was working properly.
-After finishing all the possible outcomes from the selected criteria I made a for loop that looped the number value inputed from the user in the length option prompt.
-In the for loop it had a math floor method and math random method in order to get a random whole number and using the length of the array it would give an element from the final merged array.
-I then made an empty array which I then used in order to add the final result of all the random given elements into it using the unshift method, I then used the join method in order convert the elements in the array into one single string.
-Lastly I made a function that inserted the final password into the textbox with the placeholder text 'your secure password'.
-I then called the function and added comments to my script and html.
+<h1 align="center">Password-generator</h1> 
+  
+[LinkedIn]: https://www.linkedin.com/in/jason-barrera-ramirez-b2a473204/
+![license-badge](https://img.shields.io/badge/License-MIT-blueviolet)
+![followers](https://img.shields.io/github/followers/jbramirez03?style=social)
 
-## Screenshots:
-[Runnning live website](./Develop/images/screenshot-1.png)
-[Length prompt](Develop/images/screenshot2.png)
-[Return with alert if no value given](Develop/images/screenshot3.png)
-[Lowercase option](Develop/images/screenshot4.png)
-[Uppercase option](Develop/images/screenshot5.png)
-[Number option](Develop/images/screenshot6.png)
-[Symbol option](Develop/images/screenshot7.png)
-[Password in textbox](Develop/images/screenshot9.png)
+[MIT]: https://choosealicense.com/licenses/mit/
+## Summary
+This a front-end project that uses HTML, CSS, and JS in order to generate passwords based on criteria selected from the user.
+## Table of Contents
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+- [Technologies](#technologies)
+- [Future development](#future-development)
+- [How to contribute](#how-to-contribute)
+- [Questions](#questions)
+- [Link](#link)
 
-## Links
-[Github](https://jbramirez03.github.io/Password-generator/)
+## Usage
+In order to begin generating passwords you must first click the generate password button. After you click a series of alerts pop up and you must select which type of characters you would like in your password. Once this is completed your password will appear in the text field and you then can copy and paste in order to use as you wish.
+### Start screen
+![Runnning live website](./Develop/images/screenshot-1.png)
+### Length choice 
+![Length prompt](Develop/images/screenshot2.png)
+### Include numbers option
+![Number option](Develop/images/screenshot6.png)
+### Generated password
+![Password in textbox](Develop/images/screenshot9.png)
+## Credits
+Jason Barrera-Ramirez<br><br>
+[<img align="left" width="28px" alt="LinkedIn" src="https://user-images.githubusercontent.com/82244776/128110957-497edff3-59dc-41d6-89bc-be7570e441fe.png" />][LinkedIn]<br><br>
+## License
+This Project is covered by the [MIT] license
+## Technologies
+[html]: https://developer.mozilla.org/en-US/docs/Web/HTML
+[css]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[JS]: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[<img align="left" width="26px" alt="html" src="https://user-images.githubusercontent.com/82244776/132128634-b2933978-42eb-401a-95d7-43a570d66634.png">][html]
+[<img align="left" width="26px" alt="javascript" src="https://user-images.githubusercontent.com/82244776/132129378-57ed8a1b-a991-433f-8f4d-3812a38869d0.png">][JS]
+[<img align="left" width="26px" alt="css" src="https://user-images.githubusercontent.com/82244776/132128712-8f0e657e-3337-4cc0-a9ac-4bd9ffc8576c.png">][css]<br><br>
+## Features
+This project uses Javascript in order to generate a password by selecting a random value from a set of arrays for a set length chosen by the user.
+## Future Development
+A path this project is headed is being able to allow more user input in the creation of the password so the password can be more personal and be used for personal accounts and be memorable to the user.
+## How to Contribute
+Fork the Repo and make a pull request for code to be reviewed and considered for merge to main branch.
+## Questions
+If there are any questions about the project get in contact with me at my [Email](mailto:jason1287712@gmail.com)
+## Link 
+This is the link to the live site: [Github](https://jbramirez03.github.io/Password-generator/)
