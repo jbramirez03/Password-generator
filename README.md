@@ -20,13 +20,13 @@ This a front-end project that uses HTML, CSS, and JS in order to generate passwo
 ## Usage
 In order to begin generating passwords you must first click the generate password button. After you click a series of alerts pop up and you must select which type of characters you would like in your password. Once this is completed your password will appear in the text field and you then can copy and paste in order to use as you wish.
 ### Start screen
-![Runnning live website](./Develop/images/screenshot-1.png)
+![Runnning live website](https://user-images.githubusercontent.com/82244776/132129578-17ab8021-da3a-4a43-97b3-02342f036fda.png)
 ### Length choice 
-![Length prompt](Develop/images/screenshot2.png)
+![Length prompt](https://user-images.githubusercontent.com/82244776/132129605-6af52bb8-d6e8-4613-83c5-f83e5044886f.png)
 ### Include numbers option
-![Number option](Develop/images/screenshot6.png)
+![Number option](https://user-images.githubusercontent.com/82244776/132129635-23231086-cb63-4295-a943-bdeaadb7e7e1.png)
 ### Generated password
-![Password in textbox](Develop/images/screenshot9.png)
+![Password in textbox](https://user-images.githubusercontent.com/82244776/132129658-c9465651-5dd0-46a7-8df7-ae06dfeee7b7.png)
 ## Credits
 Jason Barrera-Ramirez<br><br>
 [<img align="left" width="28px" alt="LinkedIn" src="https://user-images.githubusercontent.com/82244776/128110957-497edff3-59dc-41d6-89bc-be7570e441fe.png" />][LinkedIn]<br><br>
